@@ -10,7 +10,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({ length: 5 }, (_, i) => `Nav         Item ${i + 1}`);
+  fillerNav: MenuItem[] = menuItemList;
 
   private _mobileQueryListener: () => void;
 
@@ -27,7 +27,20 @@ export class SidenavComponent implements OnInit, OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  // shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
-  shouldRun = true;
+}
 
+const menuItemList: MenuItem[] = [
+  {
+    title: 'Registrar Lavado',
+    path: '/trabajos/crear'
+  },
+  {
+    title: 'Registra Lavado',
+    path: '/trabajos/lista'
+  }
+];
+
+export interface MenuItem {
+  path: string;
+  title: string;
 }
