@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ver-trabajo-view.component.scss']
 })
 export class VerTrabajoViewComponent implements OnInit {
-
+   
   constructor() { }
 
   ngOnInit(): void {

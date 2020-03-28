@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { TrabajosRoutingModule } from './trabajos-routing.module';
 import { CrearTrabajoFormComponent } from './components/crear-trabajo-form/crear-trabajo-form.component';
@@ -13,7 +14,8 @@ import { MaterialModule } from 'src/app/material.module';
   imports: [
     CommonModule,
     TrabajosRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class TrabajosModule { }

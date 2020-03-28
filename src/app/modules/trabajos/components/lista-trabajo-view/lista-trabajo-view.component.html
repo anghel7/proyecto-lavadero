@@ -1,1 +1,79 @@
-<p>lista-trabajo-view works!</p>
+
+<table mat-table [dataSource]="servicios"  class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+
+  
+  <ng-container matColumnDef="numero">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element "> {{element.numero}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fecha">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element">{{element.fecha}}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="propietario">
+    <th mat-header-cell *matHeaderCellDef> Propietario </th>
+    <td mat-cell *matCellDef="let element">{{element.propietario}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="tipo">
+    <th mat-header-cell *matHeaderCellDef> Tipo</th>
+    <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="marca">
+    <th mat-header-cell *matHeaderCellDef> Marca</th>
+    <td mat-cell *matCellDef="let element">{{element.marca}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="placa">
+    <th mat-header-cell *matHeaderCellDef> Placa</th>
+    <td mat-cell *matCellDef="let element"> {{element.placa}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="servicio">
+    <th mat-header-cell *matHeaderCellDef> Servicios</th>
+    <td mat-cell *matCellDef="let element"> {{element.servicio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="costo">
+    <th mat-header-cell *matHeaderCellDef> Costo Bs</th>
+    <td mat-cell *matCellDef="let element"> {{element.costo}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="mostrarColumnas" ></tr>
+  <tr mat-row *matRowDef="let row; columns: mostrarColumnas;" ></tr>
+</table>
+
+<table>
+  <th>celda1 </th>
+    <tr>
+      <td>casa</td>
+      <td>casa2</td>
+    </tr>
+  
+  
+  <th>celda2</th>
+  <tr>
+    <td>burro</td>
+    <td>brazo</td>
+  </tr>
+</table>
+
+
+<!--
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ -->

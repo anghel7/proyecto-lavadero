@@ -11,6 +11,9 @@ const routes: Routes = [
     path: 'egresos',
     loadChildren: () => import('./modules/egresos/egresos.module').then(m => m.EgresosModule)
   }
+  
+  
+  
 ];
 
 @NgModule({

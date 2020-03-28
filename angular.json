@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "proyecto-lavadero"
+  "defaultProject": "proyecto-lavadero",
+  "cli": {
+    "analytics": "5d3723a5-342f-4dda-89a6-4a4e1103eb37"
+  }
 }
