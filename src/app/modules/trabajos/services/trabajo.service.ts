@@ -117,4 +117,8 @@ export class TrabajoService {
     ]);
   }
 
+  listTrabajosElectron(): any {
+    return undefined;f
+  }
+
 }
