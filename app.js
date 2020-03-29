@@ -48,3 +48,6 @@ ipcMain.on('ping-pong-message', (event, arg) => {
   console.log('MESSAGE>> ', arg);
   event.reply('ping-pong-reply', '>>>>>>pong');
 });
+
+const db = require("./src-electron/db/models/idex");
+db.sequelize.sync()
