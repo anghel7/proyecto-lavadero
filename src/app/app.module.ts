@@ -7,8 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { LayoutModule } from './modules/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,
-
+    LayoutModule
   ],
 
   exports: [],
