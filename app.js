@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const url = require('url');
 const path = require('path');
 
@@ -40,4 +40,11 @@ app.on('activate', () => {
   if (BrowserWindow.getFocusedWindow().length === 0) {
     createWindow()
   }
+});
+
+/** Comunication */
+/** Asynchronous */
+ipcMain.on('ping-pong-message', (event, arg) => {
+  console.log('MESSAGE>> ', arg);
+  event.reply('ping-pong-reply', '>>>>>>pong');
 });
