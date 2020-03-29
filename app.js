@@ -22,6 +22,7 @@ function createWindow(params) {
     })
   );
 
+  appWindow.removeMenu();
   appWindow.webContents.openDevTools();
 
 }
