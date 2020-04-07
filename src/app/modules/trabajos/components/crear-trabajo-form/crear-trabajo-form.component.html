@@ -1,60 +1,87 @@
-<p>Crear trabajos </p>
-<form [formGroup]="crearForm" class="fecha" (ngSubmit)="onSubmit()">
-  <mat-form-field class="fecha">
-    <mat-label>Ingresar fecha</mat-label>
-    <input matInput [matDatepicker]="picker" formControlName="fecha">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-  <br />
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title class="titulo">INGRESAR VEHICULO</mat-card-title>
+  </mat-card-header>
 
-  <mat-form-field>
-    
-    <mat-label>PLACA</mat-label>
-    <input matInput placeholder="Ingresar placa" formControlName="placa">
-  </mat-form-field>
-
-  <br />
-  <h4>TIPO</h4>
-  <mat-form-field>
-    <select matNativeControl formControlName="tipo">
-      <option value="moto">Moto</option>
-      <option value="radio movil">Radio movil</option>
-      <option value="movil particular">Movil particular</option>
-    </select>
-  </mat-form-field>
-
-  <br />
-  <mat-form-field>
-    <mat-label>MARCA</mat-label>
-    <input matInput placeholder="Ingresar marca" formControlName="marca">
-  </mat-form-field>
-
-  <br />
-  <mat-form-field>
-    <mat-label>PROPIETARIO</mat-label>
-    <input matInput placeholder="Ingresar nombre y apellidos" formControlName="propietario">
-  </mat-form-field>
-<br/>
+  <mat-card-content>
+    <form [formGroup]="crearForm" (ngSubmit)="onSubmit()">
 
 
-<div formGroupName="servicio">
-  <h4>SERVICIOS</h4>
-  <mat-checkbox formControlName="lavado">Lavado</mat-checkbox>
-     <mat-form-field >
-      <mat-label>Costo Lavado </mat-label>
-      <input matInput placeholder="Simple placeholder" formControlName="costoLavado">
-    </mat-form-field>
-
-    <mat-checkbox formControlName="brillado">Brillado</mat-checkbox>
-     <mat-form-field >
-      <mat-label>Costo Brillado </mat-label>
-      <input matInput placeholder="Simple placeholder" formControlName="costoBrillado">
-    </mat-form-field>
-</div>
+      <mat-form-field appearance="outline">
+        <mat-label class="fecha1" >Ingresar fecha</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br />
 
 
-  <button  type ="submit" mat-raised-button color="primary">Registrar</button>
 
- 
-</form>
+      <mat-form-field appearance="outline" >
+        <mat-label   class="placa" >PLACA</mat-label>
+        <input matInput placeholder="Ingresar placa" formControlName="placa">
+      </mat-form-field>
+
+
+      <br />
+
+      <h4>TIPO</h4>
+      <mat-form-field appearance="outline">
+        <mat-label>Tipos de transporte</mat-label>
+        <select matNativeControl formControlName="tipo">
+          <option value="moto">Moto</option>
+          <option value="radio movil">Radio movil</option>
+          <option value="movil particular">Movil particular</option>
+        </select>
+      </mat-form-field>
+
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>MARCA</mat-label>
+        <input matInput placeholder="Ingresar marca" formControlName="marca">
+      </mat-form-field>
+
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>PROPIETARIO</mat-label>
+        <input matInput placeholder="Ingresar nombre y apellidos" formControlName="propietario">
+      </mat-form-field>
+      <br />
+
+
+      <div formGroupName="servicio">
+        <h4>SERVICIOS</h4>
+        <mat-checkbox formControlName="lavado">Lavado</mat-checkbox>
+        <mat-form-field appearance="outline">
+          <mat-label>Costo Lavado </mat-label>
+          <input matInput placeholder="Simple placeholder" formControlName="costoLavado">
+        </mat-form-field>
+
+        <mat-checkbox formControlName="brillado">Brillado</mat-checkbox>
+        <mat-form-field appearance="outline">
+          <mat-label>Costo Brillado </mat-label>
+          <input matInput placeholder="Simple placeholder" formControlName="costoBrillado">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>OBSERVACIONES</mat-label>
+          <input matInput placeholder="Ingresar marca" formControlName="observaciones">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Costo Observacion </mat-label>
+          <input matInput placeholder="Simple placeholder" formControlName="costoObservacion">
+        </mat-form-field>
+
+      </div>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button type="submit" mat-raised-button color="primary">Registrar</button>
+
+  </mat-card-actions>
+
+</mat-card>

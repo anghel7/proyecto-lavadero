@@ -1,3 +1,82 @@
-.fecha{
-    color: #578965;
+
+.container{
+    max-width: 600px;
+    height: 700px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px; 
+    grid-row:80px;
+    box-shadow: 5px 10px #3986A7;
+    outline:3px solid;
+    outline-color:#3986A7 ;
+    border-radius: 5px;
+    
+  
+    
+    
+    
 }
+.fechas{
+    max-width: 250px;
+    max-height: 22px;
+   background-color: white;
+ outline: green solid 3px;
+}
+/*.placa{
+   
+   background-color: #A7CBEE;
+   border-radius: 5px;
+   width: 235px;
+   height: 54px;
+
+
+    
+}*/
+.titulo{
+    justify-content:center;
+    color:#115AA3;
+ 
+
+}
+.fecha{
+border-style: 10px  solid  #842684;
+
+/*background-color: #2690bd;*/
+}
+
+.fecha1{
+    border-style: 10px  solid  #842684;
+    
+
+    }
+
+
+  
+    
+    ::ng-deep {
+        $custom-main-color: #115AA3;
+      
+        
+        
+        .mat-form-field-appearance-outline .mat-form-field-outline {
+           color: $custom-main-color !important;
+
+        }
+   
+    } 
+
+    .mat-form-field-infix ::ng-deep .input{
+        background-color: aqua; 
+    }
+
+    .my-component ::ng-deep .mat-checkbox-layout {
+        background-color: aqua;
+    }
+
+    :host::ng-deep mat-form-field.placa{
+        color:pink; 
+    }
+    
+    
+   

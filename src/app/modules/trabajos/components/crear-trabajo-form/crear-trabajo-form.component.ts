@@ -19,7 +19,9 @@ export class CrearTrabajoFormComponent implements OnInit {
     lavado : new FormControl(''),
     costoLavado : new FormControl(''),
     brillado : new FormControl(''),
-    costoBrillado : new FormControl('')
+    costoBrillado : new FormControl(''),
+    observaciones : new FormControl(''),
+    costoObservacion : new FormControl('')
     })
    });
 
